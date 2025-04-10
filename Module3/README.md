@@ -1,0 +1,9 @@
+1. Informational
+2. Video
+3. Lesson
+4. Article
+5. Quiz
+6. Lesson
+7. Quiz
+8. Project
+9. Project
