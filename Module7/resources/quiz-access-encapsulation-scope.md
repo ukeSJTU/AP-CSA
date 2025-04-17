@@ -1,0 +1,135 @@
+# Quiz: Access, Encapsulation, and Scope
+
+## Question 1: Access Modifiers
+
+Fill in the code so the `String` instance variable named `name` is accessible from other classes, but the `int` variable named `age` isn't.
+
+**Correct Code:**
+
+```java
+public class Student {
+  public String name;
+  private int age;
+}
+```
+
+## Question 2: Encapsulation Definition
+
+What does encapsulation mean?
+
+-   **Correct Answer:** The concept of separating methods and variables into distinct bundles of logic.
+    -   Explanation: We encapsulate our classes to help organize our code.
+-   **Other Choices:**
+    -   The concept of returning values from your methods.
+    -   The concept that some variables only exist in a certain scope.
+    -   The concept of creating different classes to represent objects in the real world.
+
+## Question 3: Local vs. Instance Variables
+
+What value will be printed given the following code snippet?
+
+**Code:**
+
+```java
+public class Human {
+  public String name;
+  public Human(String inputName) {
+    this.name = inputName;
+  }
+  public void sayName(String name) {
+    System.out.println("My name is " + name);
+  }
+  public static void main(String[] args) {
+    Human hero = new Human("Clark Kent");
+    hero.sayName("Superman");
+  }
+}
+```
+
+-   **Correct Answer:** `My name is Superman`
+    -   Explanation: Since we're not using `this.name`, the local variable `name` will be printed.
+-   **Other Choices:**
+    -   `My name is Clark Kent`
+    -   Nothing will be printed since `sayName()` is a `void` method.
+    -   `My name is hero`
+
+## Question 4: Using `this` Keyword
+
+Let's say you're writing a method named `increaseAgeByFive()` that is trying to increase the instance variable of the `Dog` class named `age` by `5`. However, there is also a local variable named `age`. How would you increase only the instance variable by `5`?
+
+-   **Correct Answer:**
+
+    ```java
+    this.age += 5;
+    ```
+
+    -   Explanation: By using `this.`, we are modifying the instance variable named `age`.
+
+-   **Other Choices:**
+    -   `age += 5;`
+    -   `Dog.age += 5;`
+    -   `self.age += 5;`
+
+## Question 5: Understanding `this` in Method Calls
+
+Explain the body of the `methodOne()` method in simple terms.
+
+**Code:**
+
+```java
+class myDemoClass {
+  int demoInstanceVariable;
+  public void methodOne() {
+    this.methodTwo(this);
+  }
+  public void methodTwo(myDemoClass a) {
+    System.out.println(a.demoInstanceVariable);
+  }
+}
+```
+
+-   **Correct Answer:** Whatever object (`this`) that called `methodOne()` proceeds to call `methodTwo()`. `methodTwo()` takes a `myDemoClass` object as a parameter, so in addition to calling the method, `this` passes itself as a parameter to `methodTwo()`.
+    -   Explanation: This describes the behavior of `methodOne()`, where `this` is used both to call `methodTwo()` and to pass the current object as a parameter.
+-   **Other Choices:**
+    -   The method will print the instance variable `demoInstanceVariable` of whatever `myDemoClass` object that it gets as a parameter.
+    -   Whatever object (`this`) that called `methodOne()` proceeds to call `methodTwo()`. `methodTwo()` has a default parameter of `this` which will automatically be whatever object called `methodOne`.
+    -   Look, we’re using that weird `this` keyword twice, and that’s really confusing. I can’t explain what that’s doing.
+
+## Question 6: Mutator Methods
+
+Which of the following is NOT true about mutator methods?
+
+-   **Correct Answer:** Mutator methods return the value of an instance variable.
+    -   Explanation: This is the job of an accessor method, not a mutator method.
+-   **Other Choices:**
+    -   Mutator methods are often `void` methods.
+    -   Mutator methods should be marked as `public`.
+    -   Mutator methods often have one parameter of the same type as the instance variable they’re interacting with.
+
+## Question 7: Accessor Methods
+
+Given the following instance variables for a `Dog` class, which of the following methods is an accessor method for the `age` variable?
+
+**Code:**
+
+```java
+public class Dog {
+  private String name;
+  private int age;
+}
+```
+
+-   **Correct Answer:**
+
+    ```java
+    public int getAge() {
+      return this.age;
+    }
+    ```
+
+    -   Explanation: An accessor method should be `public` and return the correct instance variable with the matching return type.
+
+-   **Other Choices:**
+    -   `private int getAge() { return this.age; }`
+    -   `private String getAge() { return this.age; }`
+    -   `public String getAge() { return this.age; }`

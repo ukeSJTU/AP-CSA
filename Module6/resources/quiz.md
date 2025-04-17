@@ -1,0 +1,50 @@
+# Quiz: String Methods
+
+## Question 1: True/False
+
+**True/False:** `concat()` doesn’t actually change the value of the original string.
+
+-   **Answer:** True
+-   **Explanation:** Make sure to reassign the value of the string if you do want to change it.
+
+## Question 2: Fill in the Blank
+
+Complete the code below to find the character located at index 2:
+
+```java
+String str = "qwer";
+System.out.println(str._____(2));
+```
+
+-   **Answer:** `charAt`
+-   **Explanation:** You got it!
+
+## Question 3: substring() Usage
+
+Suppose we have a `String` like so. How would we use `substring()` to print out a value of `940`?
+
+```java
+String address = "940 Lorimer";
+```
+
+-   **Answer:** `address.substring(0, 3)`
+-   **Explanation:** This would print out `940`.
+
+## Question 4: length() Output
+
+What will the following code print out?
+
+```java
+String message = "how r u?";
+System.out.println(message.length());
+```
+
+-   **Answer:** `8`
+-   **Explanation:** There are a total of 8 characters in `message`.
+
+## Question 5: Uppercase Conversion
+
+Which of the following string methods returns the string value converted to uppercase?
+
+-   **Answer:** `toUpperCase()`
+-   **Explanation:** `.toUpperCase()` returns the string value converted to uppercase.
