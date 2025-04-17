@@ -1,5 +1,8 @@
 .DS_Store
 
+# Ignore mkslides build artifacts
+site/
+
 # Compiled class file
 *.class
 
