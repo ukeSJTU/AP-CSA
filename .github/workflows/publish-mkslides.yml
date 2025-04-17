@@ -26,7 +26,15 @@ jobs:
             - name: Build slides for each module
               run: |
                   for module in Module*/; do
-                      mkslides build slides -f ../mkslides.yml
+                      if [ -d "${module}slides" ]; then
+                          echo "Building slides for ${module}slides/"
+                          cd $module
+                          mkdir -p site
+                          mkslides build -f ../mkslides.yml -d ./site slides
+                          cd ..
+                      else
+                          echo "Skipping $module - no slides directory found"
+                      fi
                   done
 
             - name: Deploy to GitHub Pages
