@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+            <link rel="icon" href="https://hogenttin.github.io/cdn/favicon/favicon.ico">
+        
+
+        <link rel="stylesheet" href="assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="https://hogenttin.github.io/cdn/styles/reveal-js/slides.css" />
+        
+        
+            <link rel="stylesheet" href="assets/vs.css" />
+        
+
+        
+            
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="^\s*---\s*$"
+                
+                    data-separator-vertical="^\s*-v-\s*$"
+                
+                    data-separator-notes="^Notes?:"
+                
+                >
+                    <textarea data-template>
+                        # Quiz: Java Methods
+
+---
+
+# Question 1: Method Signature with Return and Parameter
+
+-   Which method signature would make a method that returns an `int` and takes in a `String`?
+
+-v-
+
+# Question 1: Answer
+
+-   `public int countLetters(String message)`. The return type is `int` and the input is of type `String`.
+
+---
+
+# Question 2: Identifying Non-Method Call
+
+-   Which line of code is **NOT** an example of calling a method?
+
+-v-
+
+# Question 2: Answer
+
+-   `int sugarCubes = 7;`. This line of code represents a variable being declared and initialized, not a method being called.
+
+---
+
+# Question 3: Purpose of `void` Keyword
+
+-   When defining a method, the `void` keyword specifies which of the following?
+
+-v-
+
+# Question 3: Answer
+
+-   The method does not return a value. `void` means that nothing is returned from the method call.
+
+---
+
+# Question 4: Calling Method on Object
+
+-   An object named `dalmatian` belongs to the Spot class. Which of the following correctly calls the `run` method on `dalmatian`?
+
+-v-
+
+# Question 4: Answer
+
+-   `dalmatian.run();`. The object is `dalmatian`, and the method `run()` is being called on it.
+
+---
+
+# Question 5: Calling Method with Input
+
+-   Fill in the code that will call the `addSugar()` method with 7 as an input.
+-   **Code:**
+    ```java
+    public class Coffee {
+        public Coffee(){
+        }
+        public void addSugar(int sugarCubes){
+            System.out.println("Added " + sugarCubes + " sugar cubes!");
+        }
+        public static void main(String[] args){
+            Coffee myCup = new Coffee();
+            myCup.addSugar(7);
+        }
+    }
+    ```
+
+-v-
+
+# Question 5: Answer
+
+-   `myCup.addSugar(7);`
+
+---
+
+# Question 6: Identifying Parameter in Method
+
+-   In this method definition, what does `miles` represent?
+-   **Code:**
+    ```java
+    public void run(int miles) {}
+    ```
+
+-v-
+
+# Question 6: Answer
+
+-   A parameter of type `int`. It is the `int` input to the `run()` method.
+
+---
+
+# Question 7: Error in Code Scope
+
+-   Is there an error that will prevent this code from running?
+-   **Code:**
+    ```java
+    class Coffee{
+        public Coffee(){
+        }
+        public void stir(){
+            String stirring = "Stirring the coffee!";
+        }
+        public static void main(String[] args){
+            Coffee myCup = new Coffee();
+            myCup.stir();
+            System.out.println(stirring);
+        }
+    }
+    ```
+
+-v-
+
+# Question 7: Answer
+
+-   Yes! The variable `stirring` cannot be accessed in the `main()` method. `stirring` only exists within the `stir()` method.
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="assets/reveal-js/dist/reveal.js"></script>
+        <script src="assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="assets/reveal-js/plugin/zoom/zoom.js"></script>
+        <script src="assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="assets/reveal-js/plugin/math/math.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal-plantuml/dist/reveal-plantuml.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                        height: 1080,
+                    
+                        width: 1920,
+                    
+                        transition: "fade",
+                    
+                
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealZoom,
+                    RevealNotes,
+                    RevealMath,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>

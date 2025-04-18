@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+            <link rel="icon" href="https://hogenttin.github.io/cdn/favicon/favicon.ico">
+        
+
+        <link rel="stylesheet" href="assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="https://hogenttin.github.io/cdn/styles/reveal-js/slides.css" />
+        
+        
+            <link rel="stylesheet" href="assets/vs.css" />
+        
+
+        
+            
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="^\s*---\s*$"
+                
+                    data-separator-vertical="^\s*-v-\s*$"
+                
+                    data-separator-notes="^Notes?:"
+                
+                >
+                    <textarea data-template>
+                        # Access, Encapsulation, and Scope
+
+-   Understanding access and scope in Java
+-   Key concepts for larger programs with multiple objects and classes
+
+---
+
+# What are Access and Scope?
+
+-   **Access**: Determines which parts of your program can interact with specific variables or methods
+-   **Scope**: Defines the visibility of variables within different parts of your code
+
+-v-
+
+## Access Topics
+
+-   `public` and `private` keywords
+-   Encapsulation
+-   Accessor methods ("getters")
+-   Mutator methods ("setters")
+
+-v-
+
+## Scope Topics
+
+-   Local variables vs. instance variables
+-   The `this` keyword
+
+---
+
+# The `public` Keyword
+
+-   Declaring something as `public` allows any part of the code to interact with it
+-   Applies to classes, variables, constructors, and methods
+
+![](../src/examples/Dog.java)
+
+-v-
+
+## Example Usage
+
+-   Any class can access `public` elements of another class
+-   Public methods can call other public methods
+
+![](../src/examples/DogSchool.java)
+
+---
+
+# The `private` Keyword and Encapsulation
+
+-   `private` elements can only be accessed within the same class
+-   Restricts access from other classes
+
+-v-
+
+## Why Use `private`?
+
+-   Encapsulation: Hiding implementation details
+-   Creates neat bundles of logic
+-   Prevents unintended changes from other classes
+
+---
+
+# Accessor and Mutator Methods
+
+-   **Accessor Methods** ("getters"): Allow access to `private` variables
+-   **Mutator Methods** ("setters"): Allow modification of `private` variables
+
+![](../src/examples/DogGetSetExample.java)
+
+---
+
+# Scope: Local Variables
+
+-   Variables declared inside a method are local to that method
+-   Scope is limited to where the variable is declared
+-   Applies to conditionals and loops as well
+
+![](../src/examples/ScopeExample.java)
+
+---
+
+# Scope: The `this` Keyword
+
+-   Used to refer to the current object's instance variables
+-   Differentiates between local and instance variables with the same name
+
+![](../src/examples/DogThisExample.java)
+
+---
+
+# Using `this` With Methods
+
+-   `this` can be used to call other methods within the same class
+-   Acts as a placeholder for the current object
+
+![](../src/examples/Computer.java)
+
+---
+
+# Other Private Methods
+
+-   Often used as helper methods for larger public methods
+-   Keeps complex logic hidden from external classes
+
+![](../src/examples/CheckingAccountHelper.java)
+
+---
+
+# Review
+
+-   `public` and `private` define access levels
+-   Encapsulation hides implementation details
+-   `this` distinguishes instance variables from local ones
+-   Local variables are scoped to their declaration block
+-   `this` can call methods within the same class
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="assets/reveal-js/dist/reveal.js"></script>
+        <script src="assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="assets/reveal-js/plugin/zoom/zoom.js"></script>
+        <script src="assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="assets/reveal-js/plugin/math/math.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal-plantuml/dist/reveal-plantuml.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                        height: 1080,
+                    
+                        width: 1920,
+                    
+                        transition: "fade",
+                    
+                
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealZoom,
+                    RevealNotes,
+                    RevealMath,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>

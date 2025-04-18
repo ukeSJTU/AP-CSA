@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+            <link rel="icon" href="https://hogenttin.github.io/cdn/favicon/favicon.ico">
+        
+
+        <link rel="stylesheet" href="assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="https://hogenttin.github.io/cdn/styles/reveal-js/slides.css" />
+        
+        
+            <link rel="stylesheet" href="assets/vs.css" />
+        
+
+        
+            
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="^\s*---\s*$"
+                
+                    data-separator-vertical="^\s*-v-\s*$"
+                
+                    data-separator-notes="^Notes?:"
+                
+                >
+                    <textarea data-template>
+                        # Desert Island Playlist Project
+
+## Objective
+
+-   Study for the AP Computer Science A Exam by building a playlist of your favorite music using Java `Arrays` and `ArrayList`.
+
+---
+
+# Project Brief
+
+-   You're heading to a desert island for a few days and can bring a playlist of your favorite music.
+-   Build `Playlist.java` to store and customize a music playlist using `Arrays` and `ArrayList`.
+-   Add favorite songs and manipulate the playlist with various functions.
+
+---
+
+# Tasks: Create Your Playlist
+
+-   **Add `main()` Method and Import Libraries**: Include `main()` in `Playlist` class and import `Arrays` and `ArrayList`.
+-   **Create Array of Favorite Songs**: Initialize `favoriteSongs` with 10 songs in "Artist - Song Title" format.
+-   **Print First Three Songs**: Display the first three songs from `favoriteSongs`.
+-   **Create ArrayList for Desert Island Playlist**: Initialize `desertIslandPlaylist` for `String` values.
+-   **Add Songs to Desert Island Playlist**: Add 5 unique favorite songs to `desertIslandPlaylist`.
+-   **Print Desert Island Playlist**: Show the current playlist content.
+
+-v-
+
+## Key Concepts
+
+-   Using `Arrays` for fixed-size lists.
+-   Using `ArrayList` for dynamic lists with `add()`.
+
+---
+
+# Tasks: Add and Remove Songs
+
+-   **Add All Favorite Songs**: Use `Arrays.asList()` and `addAll()` to add all `favoriteSongs` to `desertIslandPlaylist`.
+-   **Check Number of Songs**: Use `size()` to print the total number of songs in `desertIslandPlaylist`.
+-   **Remove Songs to Keep Top 5**: Use `remove()` to reduce `desertIslandPlaylist` to your top 5 songs.
+
+-v-
+
+## Key Concepts
+
+-   Combining lists with `addAll()`.
+-   Managing list size with `size()` and `remove()`.
+
+---
+
+# Tasks: Swap Songs
+
+-   **Review Current Playlist**: Print `desertIslandPlaylist` with top 5 songs.
+-   **Get Indices of Songs to Swap**: Use `indexOf()` to find positions of two songs to swap.
+-   **Store Song A Temporarily**: Save one song in a temporary variable.
+-   **Replace Song A with Song B**: Use `set()` to replace one song with another.
+-   **Complete the Swap**: Use `set()` again to place the temporary song in the other position.
+
+-v-
+
+## Key Concepts
+
+-   Finding positions with `indexOf()`.
+-   Updating positions with `set()` for swapping elements.
+
+---
+
+# Tasks: Remix!
+
+-   **Explore Further**: Consider additional ideas:
+    -   Build playlists for food recipes, movies, or TV shows.
+    -   Create a method to shuffle song order.
+    -   Reverse the song order.
+
+-v-
+
+## Key Concepts
+
+-   Extending concepts to other domains.
+-   Experimenting with list manipulation techniques.
+
+---
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="assets/reveal-js/dist/reveal.js"></script>
+        <script src="assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="assets/reveal-js/plugin/zoom/zoom.js"></script>
+        <script src="assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="assets/reveal-js/plugin/math/math.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal-plantuml/dist/reveal-plantuml.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                        height: 1080,
+                    
+                        width: 1920,
+                    
+                        transition: "fade",
+                    
+                
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealZoom,
+                    RevealNotes,
+                    RevealMath,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>

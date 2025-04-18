@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+            <link rel="icon" href="https://hogenttin.github.io/cdn/favicon/favicon.ico">
+        
+
+        <link rel="stylesheet" href="assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="https://hogenttin.github.io/cdn/styles/reveal-js/slides.css" />
+        
+        
+            <link rel="stylesheet" href="assets/vs.css" />
+        
+
+        
+            
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="^\s*---\s*$"
+                
+                    data-separator-vertical="^\s*-v-\s*$"
+                
+                    data-separator-notes="^Notes?:"
+                
+                >
+                    <textarea data-template>
+                        # Java Program Structure
+
+-   Java programs have a specific structure.
+-   Let's analyze the Hello World program line by line.
+
+---
+
+# Case-Sensitivity
+
+-   Java is a case-sensitive language.
+-   Syntax must match the exact case (e.g., `System.out.println()` cannot be `system.out.println()`).
+
+---
+
+# Comments in Java
+
+-   Comments document code and are ignored by the compiler.
+-   Single-line comments use `//`.
+
+![](../src/examples/HelloWorld.java)
+
+---
+
+# Classes in Java
+
+-   All Java programs consist of at least one class.
+-   Class name must match the file name (e.g., `HelloWorld` class in `HelloWorld.java`).
+-   Uses Pascal Case (capitalize every word).
+-   Curly braces `{}` define the scope of the class.
+
+---
+
+# Methods in Java
+
+-   Every Java program must have a `main()` method.
+-   `main()` holds the instructions for the program.
+-   Methods are sequences of tasks for the computer to execute.
+
+---
+
+# Statements in Java
+
+-   Statements perform a single task and end with a semicolon.
+-   Example: `System.out.println("Hello World!");` outputs text to the terminal.
+-   Uses dot notation (`.`) to access object parts like `System.out`.
+
+---
+
+# Whitespace in Java
+
+-   Whitespace (tabs, spaces, newlines) is ignored by the compiler.
+-   Used for readability, making code easier for humans to understand.
+-   Indent and separate lines for clarity.
+
+---
+
+# Practice and Resources
+
+-   Familiarity with Java structure grows with practice.
+-   Additional resources for coding style:
+    -   [Twitter Java Style Guide](https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md)
+    -   [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="assets/reveal-js/dist/reveal.js"></script>
+        <script src="assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="assets/reveal-js/plugin/zoom/zoom.js"></script>
+        <script src="assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="assets/reveal-js/plugin/math/math.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal-plantuml/dist/reveal-plantuml.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                        height: 1080,
+                    
+                        width: 1920,
+                    
+                        transition: "fade",
+                    
+                
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealZoom,
+                    RevealNotes,
+                    RevealMath,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>

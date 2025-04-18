@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+            <link rel="icon" href="https://hogenttin.github.io/cdn/favicon/favicon.ico">
+        
+
+        <link rel="stylesheet" href="assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="https://hogenttin.github.io/cdn/styles/reveal-js/slides.css" />
+        
+        
+            <link rel="stylesheet" href="assets/vs.css" />
+        
+
+        
+            
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="^\s*---\s*$"
+                
+                    data-separator-vertical="^\s*-v-\s*$"
+                
+                    data-separator-notes="^Notes?:"
+                
+                >
+                    <textarea data-template>
+                        # Project: DNA Sequencing
+
+## Objective
+
+-   Study for the AP Computer Science A Exam (Java)
+-   Develop a program to identify proteins in DNA strands
+
+---
+
+## Project Brief
+
+-   **Goal:** Write a Java program (`DNA.java`) to determine if a DNA strand contains a protein.
+-   **DNA Composition:** Composed of nucleotides `A` (Adenine), `C` (Cytosine), `G` (Guanine), `T` (Thymine).
+-   **Protein Criteria:**
+    -   Starts with "start codon": `ATG`
+    -   Ends with "stop codon": `TGA`
+    -   Sequence length between start and stop codons must be divisible by 3 (each codon is 3 nucleotides).
+
+-v-
+
+## Examples
+
+-   `ATGCGATACTGA`: Is a protein (starts with `ATG`, ends with `TGA`, length divisible by 3).
+-   `ATGCGATAGA`: Not a protein (length not divisible by 3).
+
+---
+
+## Key String Methods
+
+-   `length()`: Returns the length of the string.
+-   `indexOf()`: Finds the index of a substring.
+-   `substring()`: Extracts a part of the string.
+-   Other methods like `concat()`, `equals()`, `charAt()`, `toUpperCase()`, `toLowerCase()` may be useful but not all are required.
+
+---
+
+## Project Tasks
+
+-   **Setup:** Create a basic structure for `DNA.java`.
+-   **Commenting:** Add a descriptive comment about the program's purpose.
+-   **Testing:** Use provided DNA strands (`dna1`, `dna2`, `dna3`) to test the program.
+-   **Logic Development:** Implement checks for start/stop codons and length divisibility.
+-   **Protein Extraction:** Use `substring()` to extract the protein sequence if conditions are met.
+
+-v-
+
+## Test Cases
+
+-   `dna1` ("ATGCGATACGCTTGA"): Should identify a protein.
+-   `dna2` ("ATGCGATACGTGA"): Should not identify a protein.
+-   `dna3` ("ATTAATATGTACTGA"): Should identify a protein.
+
+---
+
+## Code Structure
+
+**Starter Template Available:** `../src/projects/DNA_Sequencing_Starter/DNA.java`
+
+**Solution Available:** `../src/projects/DNA_Sequencing_Solution/DNA.java`
+
+-   Follow the tasks to build the logic step-by-step.
+-   Use comments to guide implementation of each condition check.
+
+---
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="assets/reveal-js/dist/reveal.js"></script>
+        <script src="assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="assets/reveal-js/plugin/zoom/zoom.js"></script>
+        <script src="assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="assets/reveal-js/plugin/math/math.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal-plantuml/dist/reveal-plantuml.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                        height: 1080,
+                    
+                        width: 1920,
+                    
+                        transition: "fade",
+                    
+                
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealZoom,
+                    RevealNotes,
+                    RevealMath,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>
