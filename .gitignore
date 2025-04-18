@@ -2,6 +2,7 @@
 
 # Ignore mkslides build artifacts
 site/
+temp_slides/
 
 # Compiled class file
 *.class
